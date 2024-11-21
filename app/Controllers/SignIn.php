@@ -2,16 +2,16 @@
 
 namespace App\Controllers;
 
-use App\Models\SigninModel;
+use App\Models\SignInModel;
 
 // use App\Models\SigninModel;
 
-class Signin extends BaseController
+class SignIn extends BaseController
 {
     protected $signinModel;
 
     public function __consturct(){
-        $this->signinModel = new SigninModel();
+        $this->signinModel = new SignInModel();
     }
 
     public function index()
