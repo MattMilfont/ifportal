@@ -8,7 +8,7 @@ class Login extends BaseController
 {
     protected $loginModel;
 
-    public function __consturct(){
+    public function __construct(){
         $this->loginModel = new LoginModel();
     }
 
@@ -20,7 +20,6 @@ class Login extends BaseController
     public function loginPost()
     {
         $userData = $this->request->getJSON(TRUE);
-
         $return = $this->loginModel->checkUser($userData);
 
         if($return != false){
