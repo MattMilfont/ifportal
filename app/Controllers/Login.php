@@ -23,9 +23,9 @@ class Login extends BaseController
         $return = $this->loginModel->checkUser($userData);
 
         if($return != false){
-            return "true";
+            return $this->response->setJSON($return);
         }else{
-            return "false";
+            return $this->response->setJSON(['error' => 'Usuário não encontrado']);
         }
     }
     

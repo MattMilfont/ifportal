@@ -13,7 +13,7 @@ class LoginModel extends Model
 
         $result = $query->getRowArray();
         if($result['password'] == $userData['password']){
-            return True;
+            return $result;
         }else{
             return False;
         }
