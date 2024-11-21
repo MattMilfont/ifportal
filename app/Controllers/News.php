@@ -25,4 +25,18 @@ class News extends BaseController
             return $this->response->setJSON(['error' => 'Não há nenhuma notícia']);
         }
     }
+
+    public function getNewsFederation(){
+        $requestData = $this->request->getGet();
+        
+        $federation = $requestData['federation'];
+
+        $return = $this->newsModel->getNewsFederation($federation);
+
+        if(count($return) != 0){
+            return $this->response->setJSON($return);
+        }else{
+            return $this->response->setJSON(['error' => 'Não há nenhuma notícia']);
+        }
+    }
 }

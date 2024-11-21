@@ -11,4 +11,11 @@ class NewsModel extends Model
                           ->get();
         return $query->getResultArray();
     }
+
+    public function getNewsFederation($federation){
+        $query = $this->db->table('news')
+                           ->where('federation', $federation)
+                           ->get();
+        return $query->getResultArray();
+    }
 }

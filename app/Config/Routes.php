@@ -12,6 +12,8 @@ $routes->post('/signin', 'SignIn::signinPost');
 $routes->get('/allUsers', 'Users::getAllUsers');
 $routes->post('/users', 'Users::getUser');
 $routes->get('/news', 'News::getAllNews');
+$routes->get('/newsFederation', 'News::getNewsFederation');
+
 
 
 
